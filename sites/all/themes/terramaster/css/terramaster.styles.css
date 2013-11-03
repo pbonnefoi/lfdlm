@@ -1,0 +1,25 @@
+img, media {
+  max-width: 100%;
+}
+
+/* No files to import found in partials/components/**\/* */
+.l-header {
+  background: #62765c;
+  text-align: center;
+}
+
+.site-name {
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.site-name a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.proper-noun {
+  text-transform: uppercase;
+}
