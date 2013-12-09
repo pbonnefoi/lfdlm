@@ -555,10 +555,10 @@ function theme_location_cck_field_popup($variables) {
  */
  function location_cck_token_info() {
    $info = array();
-   
+
    // Load all available fields.
    $entities = field_info_field_map();
-   
+
    // Loop through our fields and remove all but location types.
    foreach ($entities as $key => $value) {
      if ($value['type'] != 'location') {
@@ -573,32 +573,32 @@ function theme_location_cck_field_popup($variables) {
 
      // Loop through the location fields and setup tokens.
      foreach ($entities as $key => $value) {
-      
+
       $info['tokens']['node'][$key] = array(
         'name' => t('Location field: !field', array('!field' => $key)),
         'description' => t('Tokens for the field: !field. Replace the "?" with the delta you want. Defaults to delta 0.', array('!field' => $key)),
         'type' => $key,
       );
-     
+
        $info['types'][$key] = array(
         'name' => t('Location field: !field', array('!field' => $key)),
         'description' => t('Tokens for the field: !field. Replace the "?" with the delta you want. Defaults to delta 0.', array('!field' => $key)),
         'needs-data' => 'node',
        );
-       
+
        foreach ($fields as $field_key => $field_value) {
          $info['tokens'][$key][$field_key . ":?"] = array(
           'name' => t($field_value),
           'description' => t($field_value)
          );
        }
-       
+
      }
    }
 
    return $info;
  }
- 
+
 /**
  * Implements hook_tokens().
  */
@@ -619,16 +619,16 @@ function location_cck_tokens($type, $tokens, array $data = array(), array $optio
       // Break our token into an array to use later.
       $fields = explode(':', $name);
       $entity = $fields[0];
-      $field = $fields[1];
+      $field = (isset($fields[1])) ? $fields[1] : NULL;
       // Allow for a position at the end of the token. If no position is given
       // default it to the first element.
       $position = (isset($fields[2]) && is_numeric($fields[2]) ? $fields[2] : 0);
 
       // If the token is in the $available, replace it.
-      if($available[$field]) {
+      if(isset($available[$field])) {
         $replacements[$original] = (isset($node->{$entity}[LANGUAGE_NONE][$position][$field]) ? $node->{$entity}[LANGUAGE_NONE][$position][$field] : '');
       }
-    }  
+    }
   }
 
   return $replacements;

@@ -54,6 +54,7 @@
   <html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
 <?php endif; ?>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Paytone+One|Cookie' rel='stylesheet' type='text/css'>
   <title><?php print $head_title; ?></title>
   <?php print $head; ?>
   <?php print $styles; ?>

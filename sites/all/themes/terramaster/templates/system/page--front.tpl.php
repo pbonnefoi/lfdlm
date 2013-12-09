@@ -4,18 +4,19 @@
  * Default theme implementation to display a single Drupal page.
  */
 ?>
-<div class="l-page">
+<div<?php print $attributes; ?>>
   <header class="l-header" role="banner">
     <img src="<?php print url($theme_path . '/images/header_home.png', array('asbolute' => true)); ?>" />
     <?php if ($site_name): ?>
       <h1 class="site-name">
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
-          <span>La ferme de la<br>
+          <span>La Ferme de la<br>
             <span class="proper-noun">Marsauderie</span>
           </span>
         </a>
       </h1>
     <?php endif; ?>
+    <?php print render($page['header']); ?>
   </header>
 
   <div class="l-main">
