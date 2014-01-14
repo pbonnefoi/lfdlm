@@ -149,6 +149,74 @@ img, media {
   padding-bottom: 30px;
 }
 
+.l-bottom {
+  text-align: center;
+}
+
+.l-bottom .block__title {
+  font-family: 'Cookie', cursive;
+  font-style: italic;
+  font-size: 40px;
+  border-bottom: 1px solid #FFF;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px
+}
+
+.l-bottom .node__title a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.l-bottom ul {
+  padding: 0;
+  margin: 0;
+}
+
+.l-bottom ul li {
+  background-color: #abb858;
+  list-style: none;
+  height: 350px;
+  float: left;
+  color: #FFF;
+}
+
+.l-bottom ul li.l-bottom-left,
+.l-bottom ul li.l-bottom-center {
+  width: 315px;
+  margin-right: 7px;
+}
+
+.l-bottom ul li.l-bottom-right {
+  width: 316px;
+}
+
+#block-views-prochaine-vente-block .field-content {
+  background: url(../images/calendar.png) no-repeat center center;
+  width: 170px;
+  height: 171px;
+  margin: auto;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  padding-top: 40px;
+}
+
+#block-views-prochaine-vente-block .date-display-single {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  color: #abb858;
+  white-space: normal;
+}
+
+#block-views-prochaine-vente-block .date-display-single span {
+  font-size: 90px;
+  margin-left: 20px;
+  margin-right : 20px;
+}
+
 .l-slideshow{
   overflow: hidden;
 }

@@ -42,7 +42,20 @@
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
     </div>
+  </div>
 
+  <div class="l-bottom">
+    <ul>
+      <li class="l-bottom-left">
+        <?php print render($page['bottom-left']); ?>
+      </li>
+      <li class="l-bottom-center">
+        <?php print render($page['bottom-center']); ?>
+      </li>
+      <li class="l-bottom-right">
+        <?php print render($page['bottom-right']); ?>
+      </li>
+    </ul>
   </div>
 
   <footer class="l-footer" role="contentinfo">

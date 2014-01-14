@@ -1,5 +1,5 @@
 name = Terramaster Home
-description = A simple 3 column layout mobile first and Susy.
+description = A custom layout for LFDLM
 preview = preview.png
 template = terramaster-home-layout
 
@@ -9,6 +9,9 @@ regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
 regions[help]           = Help
 regions[content]        = Content
+regions[bottom-left]    = Bottom left
+regions[bottom-center]  = Bottom center
+regions[bottom-right]   = Bottom right
 regions[footer]         = Footer
 
 ; Stylesheets

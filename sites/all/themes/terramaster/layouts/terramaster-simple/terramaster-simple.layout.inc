@@ -9,8 +9,9 @@ regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
 regions[help]           = Help
 regions[content]        = Content
-regions[sidebar_first]  = First sidebar
-regions[sidebar_second] = Second sidebar
+regions[bottom-left]  = Bottom left
+regions[bottom-center]  = Bottom center
+regions[bottom-right] = Bottom right
 regions[footer]         = Footer
 
 ; Stylesheets
