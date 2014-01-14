@@ -148,3 +148,22 @@ img, media {
   padding-top: 20px;
   padding-bottom: 30px;
 }
+
+.l-slideshow{
+  overflow: hidden;
+}
+.flexslider{
+  background: transparent;
+  border: none;
+  border-radius: none;
+  box-shadow: none;
+}
+.flexslider .flex-viewport{
+  overflow: visible !important;
+}
+.flexslider .slides > li{
+  padding: 0 9px;
+}
+.flexslider .slides img{
+  height: auto;
+}

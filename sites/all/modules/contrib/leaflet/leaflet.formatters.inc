@@ -379,7 +379,9 @@ function leaflet_apply_map_settings(&$map, &$features, $map_settings, $entity_ty
     $entity = !empty($feat['entity']) ? $feat['entity'] : NULL;
     $token_args = array('data' => array($entity_type => $entity), 'options' => array('clear' => TRUE));
     foreach ($token_by_entity as $key) {
-      array_walk_recursive($settings[$key], 'leaflet_token_replace', $token_args);
+       if (isset($settings[$key]) && is_array($settings[$key])) {
+        array_walk_recursive($settings[$key], 'leaflet_token_replace', $token_args);
+      }
     }
 
     if (isset($settings['popup']['show']) && $settings['popup']['show']) {
@@ -442,16 +444,16 @@ function leaflet_token_replace(&$subject, $key, $data = array()) {
 
 /**
  * Helper function to standardize forms between views and field formatters.
- * 
+ *
  * $group - String
  *  The name of the group element to generate.
- * 
+ *
  * $settings - Array
  *  Current form settings (for defaults, etc)
- * 
+ *
  * $options - Array
  *  Special options needed for this form element, if necessary.
- * 
+ *
  * Return - A fully loaded form element.
  */
 function leaflet_form_elements($group, $settings, $options = NULL) {
